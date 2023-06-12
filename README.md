@@ -1,5 +1,5 @@
-# Cross compilation of Qt6.5.1 for RPI 4B
-This page shows steps to compile Qt6.5.1 for RPI 4B. Hope this page will help those stuck at following official tutorial. Before start, it is highly recommended that you use the same Ubuntu 22.04. At least not the older one. 
+# Cross compilation of Qt6.5.1 for RPI
+This page shows steps to compile Qt6.5.1 for RPI. Hope this page will help those stuck at following official tutorial. Before start, it is highly recommended that you use the same Ubuntu 22.04. At least not the older one. 
 # Prepare RPI
 Install the lastest 64bit Raspberry Pi OS with desktop and update the system.
 ```
@@ -306,12 +306,12 @@ On **CMake Configuration** opton, click Change and add follow commands. **You sh
 ![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/e9cfaf66-5ee6-4acb-8c2d-27c1b57f64b1)
 
 ## Test HelloWorld
-Insert following piece of code into CMakeLists.txt. **You should modify the following commands to your needs.**
+Insert following piece of code into CMakeLists.txt(No need for Qt Creator 10 or later). **You should modify the following commands to your needs.**
 ```
 set(CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH};/home/pmy/rpi-sysroot/usr/lib/aarch64-linux-gnu;/home/pmy/rpi-sysroot/usr")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath-link=/home/pmy/rpi-sysroot/usr/lib/aarch64-linux-gnu -Wl,-rpath-link=/home/pmy/qt6/pi/lib")
 ```
-Append following piece of code to the end of CMakeLists.txt.
+Append following piece of code to the end of CMakeLists.txt(No need for Qt Creator 10 or later).
 ```
 install(TARGETS HelloWorld
     RUNTIME DESTINATION ""

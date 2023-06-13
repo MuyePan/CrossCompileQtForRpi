@@ -27,7 +27,7 @@ sudo chmod 777 /usr/local/bin
 ```
 Remember versions of gcc(10.2.1), ld(2.35.2) and ldd(2.31). Source code of the same version should be downloaded to build cross compiler later.
 
-![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/721d231b-1059-44e4-a90d-0a40f2bb3a56)
+![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/ba2f1848-0c5c-426d-8d3f-1420931637bd)
 
 Append following piece of code to the end of ~/.bashrc.
 ```
@@ -54,7 +54,7 @@ git clone https://github.com/Kitware/CMake.git
 cd CMake
 ./bootstrap && make -j8&& sudo make install
 ```
-![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/56449d99-3302-47db-81ae-4ef9cdb70932)
+![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/e11f4e6c-a4c0-4f03-86dc-b6d463bab80b)
 
 Folder CMake is not need any more. You can delete it.
 
@@ -281,32 +281,32 @@ rsync -avz --rsync-path="sudo rsync" $HOME/qt6/pi/* pi@192.168.6.218:/usr/local/
 ```
 ## With Qt Creator
 Set up **Compilers**.
-![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/7c07efcb-35c6-4676-bec3-1cf8fa5d7ead)
+![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/e98645c4-cf99-45e3-a8b4-ecc0899d6fa0)
 
 Set up **Debuggers**.
-![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/d1948f92-eb79-4df1-8f15-c37ece1684ee)
+![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/f75adf17-b8eb-4149-a5fc-cf59978aa3d9)
 
 Set up **Devices**.
-![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/034224f7-bade-4ee9-bd4c-b9d26a508580)
+![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/57609ea4-6901-41a8-8264-c6bb7aeac844)
 
 Copy ssh key to rpi.
 ```
 ssh-copy-id -i ~/.ssh/qtc_id.pub pi@192.168.6.218
 ```
 Test the device.
-![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/7434491c-5922-43ae-bb86-9bb0d10e4f6f)
+![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/9883e600-7963-48e3-98fc-dc3f2e651bff)
 
 Set up **Qt Versions**.
-![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/21774e54-a4d0-4c21-826a-b213c7411c2b)
+![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/6c43b6f0-a256-4d2d-86f6-80bb393602af)
 
 Set up **Kits**.
-![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/51c85651-3b74-4aa2-a042-3c569fb5e7b1)
+![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/69e1f24a-bf38-4f4d-84ef-fdd9856efc56)
 
 On **CMake Configuration** opton, click Change and add follow commands. **You should modify the following commands to your needs.**
 ```
 -DCMAKE_TOOLCHAIN_FILE:UNINITIALIZED=/home/pmy/qt6/pi/lib/cmake/Qt6/qt.toolchain.cmake
 ```
-![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/e9cfaf66-5ee6-4acb-8c2d-27c1b57f64b1)
+![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/d7c4600a-7058-4541-bdfd-ce184e7fd94c)
 
 ## Test HelloWorld
 Insert following piece of code into CMakeLists.txt(No need for Qt Creator 10 or later). **You should modify the following commands to your needs.**
@@ -325,14 +325,14 @@ install(TARGETS HelloWorld
 On **Build** option select **Clear CMake** Configuration. Then on **Build** option select **Rescan Project**. 
 Goto **Projects**
 Under **Run** section, on **X11 Forwarding** tick "Forward to local display" checkbox and input :0 to the text field. 
-![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/464e321c-2ee3-4547-9f87-1b776465af37)
+![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/b396954b-fb04-48ae-a3c4-8ae67178513e)
 
 Under **Environment** section, click **Details** to expand the environment option. Click **Add**, then on **Variable** column type **LD_LIBRARY_PATH**. On the **Value** column, type **:/usr/local/qt6/lib/**.
-![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/baba825c-01ad-44d6-90d7-af7f10a70336)
+![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/059f275c-bfa4-4357-b4b6-82880b5c1054)
 
 Run.
 
-![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/21d1e4a3-d71e-45fe-ad4d-64f8368f3ec1)
+![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/ee26ad77-f370-433b-8734-89e70c21903c)
 
 We have HelloWorld running on rpi now.
 ## Add QML module
@@ -376,5 +376,6 @@ Send the binaries to rpi. **You should modify the following commands to your nee
 rsync -avz --rsync-path="sudo rsync" $HOME/qt6/pi/* pi@192.168.6.218:/usr/local/qt6
 ```
 ## Test HelloWorldQml
-![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/83db469a-0bee-4c70-bf47-f930da30d9e5)
+![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/f67fd349-3537-42f0-8e15-244f138a09d4)
+
 

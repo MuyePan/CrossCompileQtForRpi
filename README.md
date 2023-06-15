@@ -309,7 +309,7 @@ On **CMake Configuration** opton, click Change and add follow commands. **You sh
 ![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/d7c4600a-7058-4541-bdfd-ce184e7fd94c)
 
 ## Test HelloWorld
-On **Help** select **About Plugins**.Then uncheck **ClangCodeModel**.
+On **Help** option select **About Plugins**.Then uncheck **ClangCodeModel**.
 
 ![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/efb1db08-c5cc-4210-adfe-85507e36d329)
 
@@ -321,7 +321,6 @@ install(TARGETS HelloWorld
     LIBRARY DESTINATION ""
 )
 ```
-On **Build** option select **Clear CMake** Configuration. Then on **Build** option select **Rescan Project**. 
 Goto **Projects**
 Under **Run** section, on **X11 Forwarding** tick "Forward to local display" checkbox and input :0 to the text field. 
 ![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/b396954b-fb04-48ae-a3c4-8ae67178513e)

@@ -300,7 +300,7 @@ Set up **Qt Versions**.
 ![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/6c43b6f0-a256-4d2d-86f6-80bb393602af)
 
 Set up **Kits**.
-![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/69e1f24a-bf38-4f4d-84ef-fdd9856efc56)
+![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/93e04b07-7cbc-43d6-a17c-53fe6d272de9)
 
 On **CMake Configuration** opton, click Change and add follow commands. **You should modify the following commands to your needs.**
 ```
@@ -309,11 +309,10 @@ On **CMake Configuration** opton, click Change and add follow commands. **You sh
 ![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/d7c4600a-7058-4541-bdfd-ce184e7fd94c)
 
 ## Test HelloWorld
-Insert following piece of code into CMakeLists.txt(No need for Qt Creator 10 or later). **You should modify the following commands to your needs.**
-```
-set(CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH};/home/pmy/rpi-sysroot/usr/lib/aarch64-linux-gnu;/home/pmy/rpi-sysroot/usr")
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath-link=/home/pmy/rpi-sysroot/usr/lib/aarch64-linux-gnu -Wl,-rpath-link=/home/pmy/qt6/pi/lib")
-```
+On **Help** select **About Plugins**.Then uncheck **ClangCodeModel**.
+
+![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/efb1db08-c5cc-4210-adfe-85507e36d329)
+
 Append following piece of code to the end of CMakeLists.txt(No need for Qt Creator 10 or later).
 ```
 install(TARGETS HelloWorld

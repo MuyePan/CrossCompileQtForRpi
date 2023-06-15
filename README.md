@@ -309,11 +309,11 @@ On **CMake Configuration** opton, click Change and add follow commands. **You sh
 ![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/d7c4600a-7058-4541-bdfd-ce184e7fd94c)
 
 ## Test HelloWorld
-On **Help** option select **About Plugins**.Then uncheck **ClangCodeModel**.
+On **Help** option select **About Plugins**.Then uncheck **ClangCodeModel**(**No need for Qt Creator 10 or later**)..
 
 ![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/efb1db08-c5cc-4210-adfe-85507e36d329)
 
-Append following piece of code to the end of CMakeLists.txt(No need for Qt Creator 10 or later).
+Append following piece of code to the end of CMakeLists.txt(**No need for Qt Creator 10 or later**).
 ```
 install(TARGETS HelloWorld
     RUNTIME DESTINATION ""

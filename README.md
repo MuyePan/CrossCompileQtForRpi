@@ -322,7 +322,7 @@ install(TARGETS HelloWorld
 )
 ```
 Goto **Projects**
-Under **Run** section, on **X11 Forwarding** tick "Forward to local display" checkbox and input :0 to the text field. 
+Under **Run** section, on **X11 Forwarding** check **Forward to local display** and input :0 to the text field. 
 ![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/b396954b-fb04-48ae-a3c4-8ae67178513e)
 
 Under **Environment** section, click **Details** to expand the environment option. Click **Add**, then on **Variable** column type **LD_LIBRARY_PATH**. On the **Value** column, type **:/usr/local/qt6/lib/**.

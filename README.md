@@ -4,6 +4,7 @@ This page shows steps to compile Qt6.5.1 for RPI. Hope this page will help those
 Click the follow image to view this tutorial on Youtube.
 
 [![Youtube video link](https://i.ytimg.com/vi/8kpHgNKPooc/hqdefault.jpg)](//youtu.be/8kpHgNKPooc "Youtube Video")
+
 https://youtu.be/8kpHgNKPooc
 
 # Prepare RPI

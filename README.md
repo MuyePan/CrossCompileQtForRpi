@@ -293,10 +293,8 @@ Set up **Debuggers**.
 Set up **Devices**.
 ![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/57609ea4-6901-41a8-8264-c6bb7aeac844)
 
-Copy ssh key to rpi.
-```
-ssh-copy-id -i ~/.ssh/qtc_id.pub pi@192.168.6.218
-```
+Click **Deploy Public Key...** to deploy the key. Create one if not existed.
+
 Test the device.
 ![image](https://github.com/MuyePan/CrossCompileQtForRpi/assets/136073506/9883e600-7963-48e3-98fc-dc3f2e651bff)
 
